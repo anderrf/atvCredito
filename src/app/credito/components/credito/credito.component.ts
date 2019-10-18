@@ -8,36 +8,20 @@ import { CreditoService } from '../../services';
 })
 export class CreditoComponent implements OnInit {
 
-  constructor(private somarCredito: CreditoService) { 
-    private _valor: number;
-  }
+  constructor(private somarCredito: CreditoService) { }
+  
+  private _valor: number;
 
   ngOnInit() {
     this._valor = 10;
   }
 
-  calcula(valorRecebido:number, tipo:string){
-    this._valor = this.credito.somarCredito(this.valor,valorRecebido);
-    if (tipo == "um")
-    {
-      this._valor + 1;
-    }
-    else if(tipo == "dez")
-    {
-      this._valor + 2;
-    }
-    else if(tipo == "cem")
-    {
-      this._valor + 100;
-    }
-    else if(tipo == "descontar")
-    {
-      this._valor - 1;
-    }
+  calcula(valorRecebido: number){
+    this._valor = this.somarCredito.somarCredito(this._valor, valorRecebido);
   }
 
   get pegaValor(){
-    return this._valor
+    return this._valor;
   }
 
 }

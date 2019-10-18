@@ -1,0 +1,13 @@
+.row{
+    margin-top: 20px;
+}
+
+.jumbotron{
+    background-color: transparent;
+    border: white 2px solid;
+    box-shadow: 5px 10px;
+}
+
+input{
+    text-align: right;
+}
